@@ -1,0 +1,14 @@
+names:
+- Bio
+- Rov
+- Rác
+nc: 3
+roboflow:
+  license: CC BY 4.0
+  project: utd2-hyo53
+  url: https://universe.roboflow.com/utd-0dazj/utd2-hyo53/dataset/5
+  version: 5
+  workspace: utd-0dazj
+test: /home/linhnt/Desktop/yolov8s/KHDL/utd2-5/test/images
+train: /home/linhnt/Desktop/yolov8s/KHDL/utd2-5/train/images
+val: /home/linhnt/Desktop/yolov8s/KHDL/utd2-5/valid/images
