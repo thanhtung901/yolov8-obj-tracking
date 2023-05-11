@@ -1,14 +1,13 @@
 import itertools
-
 from IPython import display
 display.clear_output()
 import os
 os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
-
+from Code import index
 import supervision
 print("supervision.__version__:", supervision.__version__)
 import cv2
-
+import time
 from supervision.draw.color import ColorPalette
 from supervision.geometry.dataclasses import Point
 from supervision.video.dataclasses import VideoInfo
@@ -78,7 +77,7 @@ def match_detections_with_tracks(
 
 def main():
     from tqdm import tqdm
-    TARGET_VIDEO_PATH = './results.mkv'
+    TARGET_VIDEO_PATH = './results2.mkv'
     # create BYTETracker instance
     byte_tracker = BYTETracker(BYTETrackerArgs())
     # create VideoInfo instance
@@ -98,13 +97,17 @@ def main():
     box_annotator = BoxAnnotator(color=ColorPalette(), thickness=4, text_thickness=4, text_scale=2)
     line_annotator = LineCounterAnnotator(thickness=4, text_thickness=4, text_scale=2)
     sl = 1
-    n = []
     # open target video file
     with VideoSink(TARGET_VIDEO_PATH, video_info) as sink:
         # loop over video frames
         for frame in tqdm(generator, total=video_info.total_frames):
             # model prediction on single frame and conversion to supervision Detections
             results = model(frame)
+            # detections = Detections(
+            #     xyxy=results[0].boxes.xyxy.cuda().numpy(),
+            #     confidence=results[0].boxes.conf.cuda().numpy(),
+            #     class_id=results[0].boxes.cls.cuda().numpy().astype(int)
+            # )
             detections = Detections(
                 xyxy=results[0].boxes.xyxy.cpu().numpy(),
                 confidence=results[0].boxes.conf.cpu().numpy(),
@@ -136,6 +139,8 @@ def main():
             line_counter.update(detections=detections)
             # print(tracker_id)
             tracker_id = list(itertools.filterfalse(lambda item: not item , tracker_id))
+
+            print(tracker_id)
             if len(tracker_id) > 0:
                 tm = int(np.max(tracker_id))
                 if sl < tm:
@@ -143,14 +148,21 @@ def main():
                     print('count: ', sl)
             else:
                 pass
-
             # annotate and display frame
             frame = box_annotator.annotate(frame=frame, detections=detections, labels=labels)
             line_annotator.annotate(frame=frame, line_counter=line_counter)
             # sink.write_frame(frame)
+
             cv2.imshow('frame',frame)
             if cv2.waitKey(1) & 0xFF == ord('q'):
+                with open('Quantity.txt', 'a') as f:
+                    a = ', ' + str(sl)
+                    f.write(str(a))
+                    time.sleep(2)
+                    index()
+                    print('save oke ')
                 break
+
 
 if __name__ == "__main__":
     main()

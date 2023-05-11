@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_494083e26c44007b5b78edb534c94727 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_494083e26c44007b5b78edb534c94727" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_494083e26c44007b5b78edb534c94727 = L.map(
+                "map_494083e26c44007b5b78edb534c94727",
+                {
+                    center: [21.549003662390355, 105.84488441687587],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d4d0a33184dfb4eb53ecb768f8c5fc5e = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_494083e26c44007b5b78edb534c94727);
+        
+    
+            var circle_marker_05cee47fb0260db64b80d7fe863d6cb7 = L.circleMarker(
+                [21.5497163100176, 105.8468990777589],
+                {"bubblingMouseEvents": true, "color": "#F0ED1E", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#F0ED1E", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_494083e26c44007b5b78edb534c94727);
+        
+    
+        var popup_ae22db7db3cc1c55137499ed80449432 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d5062d44cdf5a51a2a53568ec010bd11 = $(`<div id="html_d5062d44cdf5a51a2a53568ec010bd11" style="width: 100.0%; height: 100.0%;">Radius: 50 meters</div>`)[0];
+                popup_ae22db7db3cc1c55137499ed80449432.setContent(html_d5062d44cdf5a51a2a53568ec010bd11);
+            
+        
+
+        circle_marker_05cee47fb0260db64b80d7fe863d6cb7.bindPopup(popup_ae22db7db3cc1c55137499ed80449432)
+        ;
+
+        
+    
+    
+            var marker_c393fb4f4b7652c7580bf365e2d5768d = L.marker(
+                [21.5497163100176, 105.8468990777589],
+                {"autoOpen": true}
+            ).addTo(map_494083e26c44007b5b78edb534c94727);
+        
+    
+        var popup_326dc21e21d1ce1d77cde5bc3da2388f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d786d7e864f6ed4bf09bd88096c3e820 = $(`<div id="html_d786d7e864f6ed4bf09bd88096c3e820" style="width: 100.0%; height: 100.0%;"><span style="font-size: 20px;">Phát hiện có 300 rác</span></div>`)[0];
+                popup_326dc21e21d1ce1d77cde5bc3da2388f.setContent(html_d786d7e864f6ed4bf09bd88096c3e820);
+            
+        
+
+        marker_c393fb4f4b7652c7580bf365e2d5768d.bindPopup(popup_326dc21e21d1ce1d77cde5bc3da2388f)
+        ;
+
+        
+    
+    
+            var circle_marker_36a857d1e107e0926ab14f9d0a0eacbf = L.circleMarker(
+                [21.5490567661048, 105.84824508736833],
+                {"bubblingMouseEvents": true, "color": "#1EF013", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1EF013", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_494083e26c44007b5b78edb534c94727);
+        
+    
+        var popup_f9a3b56559c866d99ac40905d8a60295 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a5d6176c591ce4d45c01e3133dfb20c8 = $(`<div id="html_a5d6176c591ce4d45c01e3133dfb20c8" style="width: 100.0%; height: 100.0%;">Radius: 50 meters</div>`)[0];
+                popup_f9a3b56559c866d99ac40905d8a60295.setContent(html_a5d6176c591ce4d45c01e3133dfb20c8);
+            
+        
+
+        circle_marker_36a857d1e107e0926ab14f9d0a0eacbf.bindPopup(popup_f9a3b56559c866d99ac40905d8a60295)
+        ;
+
+        
+    
+    
+            var marker_41a30bc31583147e4deb55c584ac2bc9 = L.marker(
+                [21.5490567661048, 105.84824508736833],
+                {"autoOpen": true}
+            ).addTo(map_494083e26c44007b5b78edb534c94727);
+        
+    
+        var popup_1d7608d04cb29d191798263cfe563fa3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_efff8000c492bc5ee7a8f77ff3981a38 = $(`<div id="html_efff8000c492bc5ee7a8f77ff3981a38" style="width: 100.0%; height: 100.0%;"><span style="font-size: 20px;">Phát hiện có 150 rác</span></div>`)[0];
+                popup_1d7608d04cb29d191798263cfe563fa3.setContent(html_efff8000c492bc5ee7a8f77ff3981a38);
+            
+        
+
+        marker_41a30bc31583147e4deb55c584ac2bc9.bindPopup(popup_1d7608d04cb29d191798263cfe563fa3)
+        ;
+
+        
+    
+    
+            var circle_marker_f0961f7cd1382b7384e22d441eafeffd = L.circleMarker(
+                [21.54507599087652, 105.84614092731694],
+                {"bubblingMouseEvents": true, "color": "#FF1105", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FF1105", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_494083e26c44007b5b78edb534c94727);
+        
+    
+        var popup_18336f540c7495ebe12aba61a2bb6366 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b7833033de98bdb4164a1ccc907b83b7 = $(`<div id="html_b7833033de98bdb4164a1ccc907b83b7" style="width: 100.0%; height: 100.0%;">Radius: 50 meters</div>`)[0];
+                popup_18336f540c7495ebe12aba61a2bb6366.setContent(html_b7833033de98bdb4164a1ccc907b83b7);
+            
+        
+
+        circle_marker_f0961f7cd1382b7384e22d441eafeffd.bindPopup(popup_18336f540c7495ebe12aba61a2bb6366)
+        ;
+
+        
+    
+    
+            var marker_f5e655a9aad57cc9a4ce2d3613a1b2b3 = L.marker(
+                [21.54507599087652, 105.84614092731694],
+                {"autoOpen": true}
+            ).addTo(map_494083e26c44007b5b78edb534c94727);
+        
+    
+        var popup_b3dbe608ef2c3ce00bad969bc34be4af = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a30e04068f7963071494804f60c37760 = $(`<div id="html_a30e04068f7963071494804f60c37760" style="width: 100.0%; height: 100.0%;"><span style="font-size: 20px;">Phát hiện có 1160 rác</span></div>`)[0];
+                popup_b3dbe608ef2c3ce00bad969bc34be4af.setContent(html_a30e04068f7963071494804f60c37760);
+            
+        
+
+        marker_f5e655a9aad57cc9a4ce2d3613a1b2b3.bindPopup(popup_b3dbe608ef2c3ce00bad969bc34be4af)
+        ;
+
+        
+    
+    
+            var circle_marker_86db6a9d037b694fa29967913e69c85e = L.circleMarker(
+                [21.549329412056036, 105.84882746370543],
+                {"bubblingMouseEvents": true, "color": "#FF1105", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FF1105", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_494083e26c44007b5b78edb534c94727);
+        
+    
+        var popup_c9a3d44bdeab4e6d95cfe25d3fe5aefa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6d1b4cd3a4c176cefe0b7cc0998c91b8 = $(`<div id="html_6d1b4cd3a4c176cefe0b7cc0998c91b8" style="width: 100.0%; height: 100.0%;">Radius: 50 meters</div>`)[0];
+                popup_c9a3d44bdeab4e6d95cfe25d3fe5aefa.setContent(html_6d1b4cd3a4c176cefe0b7cc0998c91b8);
+            
+        
+
+        circle_marker_86db6a9d037b694fa29967913e69c85e.bindPopup(popup_c9a3d44bdeab4e6d95cfe25d3fe5aefa)
+        ;
+
+        
+    
+    
+            var marker_81598c0c74b5cebb32ffbefe46873199 = L.marker(
+                [21.549329412056036, 105.84882746370543],
+                {"autoOpen": true}
+            ).addTo(map_494083e26c44007b5b78edb534c94727);
+        
+    
+        var popup_3b46f056c0cfac1c9bd6b6a71e1ca1d5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3bdc9857b3cba6f5cf9e0b4adf8cd647 = $(`<div id="html_3bdc9857b3cba6f5cf9e0b4adf8cd647" style="width: 100.0%; height: 100.0%;"><span style="font-size: 20px;">Phát hiện có 1450 rác</span></div>`)[0];
+                popup_3b46f056c0cfac1c9bd6b6a71e1ca1d5.setContent(html_3bdc9857b3cba6f5cf9e0b4adf8cd647);
+            
+        
+
+        marker_81598c0c74b5cebb32ffbefe46873199.bindPopup(popup_3b46f056c0cfac1c9bd6b6a71e1ca1d5)
+        ;
+
+        
+    
+    
+            var circle_marker_fa1ad2e63b89bb80d5dad2fd20c5da8a = L.circleMarker(
+                [21.5489741292071, 105.84237351734582],
+                {"bubblingMouseEvents": true, "color": "#1EF013", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1EF013", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_494083e26c44007b5b78edb534c94727);
+        
+    
+        var popup_8d53d2510b4b48a88f00d8a54591cc3d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c60e6ac6ee5b4a06f23815d2de725eb8 = $(`<div id="html_c60e6ac6ee5b4a06f23815d2de725eb8" style="width: 100.0%; height: 100.0%;">Radius: 50 meters</div>`)[0];
+                popup_8d53d2510b4b48a88f00d8a54591cc3d.setContent(html_c60e6ac6ee5b4a06f23815d2de725eb8);
+            
+        
+
+        circle_marker_fa1ad2e63b89bb80d5dad2fd20c5da8a.bindPopup(popup_8d53d2510b4b48a88f00d8a54591cc3d)
+        ;
+
+        
+    
+    
+            var marker_9b314555139721433808da6801600e5f = L.marker(
+                [21.5489741292071, 105.84237351734582],
+                {"autoOpen": true}
+            ).addTo(map_494083e26c44007b5b78edb534c94727);
+        
+    
+        var popup_1bdb6e4d222a2d7bea716af0a4ff71d0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bcfc6005bd635f99074b3f899abfe3ea = $(`<div id="html_bcfc6005bd635f99074b3f899abfe3ea" style="width: 100.0%; height: 100.0%;"><span style="font-size: 20px;">Phát hiện có 10 rác</span></div>`)[0];
+                popup_1bdb6e4d222a2d7bea716af0a4ff71d0.setContent(html_bcfc6005bd635f99074b3f899abfe3ea);
+            
+        
+
+        marker_9b314555139721433808da6801600e5f.bindPopup(popup_1bdb6e4d222a2d7bea716af0a4ff71d0)
+        ;
+
+        
+    
+    
+            var circle_marker_6fd6840d1959a697404653085179669a = L.circleMarker(
+                [21.552873458300713, 105.84381510993563],
+                {"bubblingMouseEvents": true, "color": "#1EF013", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1EF013", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_494083e26c44007b5b78edb534c94727);
+        
+    
+        var popup_e8db479e655ad2e44683a8196ba2ce0d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_398f496fc055d2c8327aefe99c147df9 = $(`<div id="html_398f496fc055d2c8327aefe99c147df9" style="width: 100.0%; height: 100.0%;">Radius: 50 meters</div>`)[0];
+                popup_e8db479e655ad2e44683a8196ba2ce0d.setContent(html_398f496fc055d2c8327aefe99c147df9);
+            
+        
+
+        circle_marker_6fd6840d1959a697404653085179669a.bindPopup(popup_e8db479e655ad2e44683a8196ba2ce0d)
+        ;
+
+        
+    
+    
+            var marker_51ebf8dbeb044aff443c8eb75a2fb99d = L.marker(
+                [21.552873458300713, 105.84381510993563],
+                {"autoOpen": true}
+            ).addTo(map_494083e26c44007b5b78edb534c94727);
+        
+    
+        var popup_07b1e1aa50e8d5aa94f11d6e924a161b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_35b372cb57943323d4db5ea4aec4ab80 = $(`<div id="html_35b372cb57943323d4db5ea4aec4ab80" style="width: 100.0%; height: 100.0%;"><span style="font-size: 20px;">Phát hiện có 11 rác</span></div>`)[0];
+                popup_07b1e1aa50e8d5aa94f11d6e924a161b.setContent(html_35b372cb57943323d4db5ea4aec4ab80);
+            
+        
+
+        marker_51ebf8dbeb044aff443c8eb75a2fb99d.bindPopup(popup_07b1e1aa50e8d5aa94f11d6e924a161b)
+        ;
+
+        
+    
+    
+            var circle_marker_4cc8960d13e2345462c1ab84e9cf2ba9 = L.circleMarker(
+                [21.54707915109717, 105.84357593022196],
+                {"bubblingMouseEvents": true, "color": "#1EF013", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1EF013", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_494083e26c44007b5b78edb534c94727);
+        
+    
+        var popup_4b168b76276f73221ca51f2b146254ff = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_31ea28dab0718c10f0c9ef2b4c2f167c = $(`<div id="html_31ea28dab0718c10f0c9ef2b4c2f167c" style="width: 100.0%; height: 100.0%;">Radius: 50 meters</div>`)[0];
+                popup_4b168b76276f73221ca51f2b146254ff.setContent(html_31ea28dab0718c10f0c9ef2b4c2f167c);
+            
+        
+
+        circle_marker_4cc8960d13e2345462c1ab84e9cf2ba9.bindPopup(popup_4b168b76276f73221ca51f2b146254ff)
+        ;
+
+        
+    
+    
+            var marker_99e2f526e1fd7690783cb27413dd64cf = L.marker(
+                [21.54707915109717, 105.84357593022196],
+                {"autoOpen": true}
+            ).addTo(map_494083e26c44007b5b78edb534c94727);
+        
+    
+        var popup_aa5393bf1b31126d3c2e10e2bd2f1819 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a8fc445994fbee4add7edb34ffc93d32 = $(`<div id="html_a8fc445994fbee4add7edb34ffc93d32" style="width: 100.0%; height: 100.0%;"><span style="font-size: 20px;">Phát hiện có 51 rác</span></div>`)[0];
+                popup_aa5393bf1b31126d3c2e10e2bd2f1819.setContent(html_a8fc445994fbee4add7edb34ffc93d32);
+            
+        
+
+        marker_99e2f526e1fd7690783cb27413dd64cf.bindPopup(popup_aa5393bf1b31126d3c2e10e2bd2f1819)
+        ;
+
+        
+    
+    
+            var circle_marker_6785ae1a965716aeb7358a4b719343a8 = L.circleMarker(
+                [21.551488291887818, 105.84683819461054],
+                {"bubblingMouseEvents": true, "color": "#1EF013", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1EF013", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_494083e26c44007b5b78edb534c94727);
+        
+    
+        var popup_66b8148e15cced1c38ccffad3f72af22 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6cce1348a51a2bbd207d13b24f4178cc = $(`<div id="html_6cce1348a51a2bbd207d13b24f4178cc" style="width: 100.0%; height: 100.0%;">Radius: 50 meters</div>`)[0];
+                popup_66b8148e15cced1c38ccffad3f72af22.setContent(html_6cce1348a51a2bbd207d13b24f4178cc);
+            
+        
+
+        circle_marker_6785ae1a965716aeb7358a4b719343a8.bindPopup(popup_66b8148e15cced1c38ccffad3f72af22)
+        ;
+
+        
+    
+    
+            var marker_c5e27305d25f203e351e4e314a8a9f6e = L.marker(
+                [21.551488291887818, 105.84683819461054],
+                {"autoOpen": true}
+            ).addTo(map_494083e26c44007b5b78edb534c94727);
+        
+    
+        var popup_c28021e037994d02bb83d0402cb84280 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7be9a543be0e9bb119ebf57515a33660 = $(`<div id="html_7be9a543be0e9bb119ebf57515a33660" style="width: 100.0%; height: 100.0%;"><span style="font-size: 20px;">Phát hiện có 77 rác</span></div>`)[0];
+                popup_c28021e037994d02bb83d0402cb84280.setContent(html_7be9a543be0e9bb119ebf57515a33660);
+            
+        
+
+        marker_c5e27305d25f203e351e4e314a8a9f6e.bindPopup(popup_c28021e037994d02bb83d0402cb84280)
+        ;
+
+        
+    
+    
+            var circle_marker_9932bbfb8d96095d2936c81d75318d01 = L.circleMarker(
+                [21.547388885918576, 105.84873343464173],
+                {"bubblingMouseEvents": true, "color": "#FF1105", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FF1105", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_494083e26c44007b5b78edb534c94727);
+        
+    
+        var popup_e37d7d72877c6a35302a14ee9a983e8e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_53bea1354b54c057a796a64be9ff0fa3 = $(`<div id="html_53bea1354b54c057a796a64be9ff0fa3" style="width: 100.0%; height: 100.0%;">Radius: 50 meters</div>`)[0];
+                popup_e37d7d72877c6a35302a14ee9a983e8e.setContent(html_53bea1354b54c057a796a64be9ff0fa3);
+            
+        
+
+        circle_marker_9932bbfb8d96095d2936c81d75318d01.bindPopup(popup_e37d7d72877c6a35302a14ee9a983e8e)
+        ;
+
+        
+    
+    
+            var marker_492de370aeb5485c8c5d27e6997a6089 = L.marker(
+                [21.547388885918576, 105.84873343464173],
+                {"autoOpen": true}
+            ).addTo(map_494083e26c44007b5b78edb534c94727);
+        
+    
+        var popup_1542f614e660a723676fb2c6930b3709 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c9d47e9d7e9c8a8d2559896d6ce0c6f9 = $(`<div id="html_c9d47e9d7e9c8a8d2559896d6ce0c6f9" style="width: 100.0%; height: 100.0%;"><span style="font-size: 20px;">Phát hiện có 1000 rác</span></div>`)[0];
+                popup_1542f614e660a723676fb2c6930b3709.setContent(html_c9d47e9d7e9c8a8d2559896d6ce0c6f9);
+            
+        
+
+        marker_492de370aeb5485c8c5d27e6997a6089.bindPopup(popup_1542f614e660a723676fb2c6930b3709)
+        ;
+
+        
+    
+    
+            var circle_marker_3f89e2bbefb362e464c02c264df58832 = L.circleMarker(
+                [21.552446563496456, 105.84818131533352],
+                {"bubblingMouseEvents": true, "color": "#1EF013", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1EF013", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_494083e26c44007b5b78edb534c94727);
+        
+    
+        var popup_8e3a5eee0ad3512612ddbbb417c1ae83 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c9b2e0bd635c470db1337de2e60f8e59 = $(`<div id="html_c9b2e0bd635c470db1337de2e60f8e59" style="width: 100.0%; height: 100.0%;">Radius: 50 meters</div>`)[0];
+                popup_8e3a5eee0ad3512612ddbbb417c1ae83.setContent(html_c9b2e0bd635c470db1337de2e60f8e59);
+            
+        
+
+        circle_marker_3f89e2bbefb362e464c02c264df58832.bindPopup(popup_8e3a5eee0ad3512612ddbbb417c1ae83)
+        ;
+
+        
+    
+    
+            var marker_d5e8a7465dcd7aa67a659b7c8c83d522 = L.marker(
+                [21.552446563496456, 105.84818131533352],
+                {"autoOpen": true}
+            ).addTo(map_494083e26c44007b5b78edb534c94727);
+        
+    
+        var popup_23532474e9190d3e8b9db59ce1b4e86b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fd16fbb2c619576fe277d12ceee7b0f7 = $(`<div id="html_fd16fbb2c619576fe277d12ceee7b0f7" style="width: 100.0%; height: 100.0%;"><span style="font-size: 20px;">Phát hiện có 32 rác</span></div>`)[0];
+                popup_23532474e9190d3e8b9db59ce1b4e86b.setContent(html_fd16fbb2c619576fe277d12ceee7b0f7);
+            
+        
+
+        marker_d5e8a7465dcd7aa67a659b7c8c83d522.bindPopup(popup_23532474e9190d3e8b9db59ce1b4e86b)
+        ;
+
+        
+    
+    
+            var circle_marker_05170d5ea1d7f9389f6be762a1937d50 = L.circleMarker(
+                [21.54882529172488, 105.84352363095356],
+                {"bubblingMouseEvents": true, "color": "#1EF013", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1EF013", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_494083e26c44007b5b78edb534c94727);
+        
+    
+        var popup_5bdd5689498fe5354a14b981063c1329 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_09736910df8135e2ad410a1d21c550e5 = $(`<div id="html_09736910df8135e2ad410a1d21c550e5" style="width: 100.0%; height: 100.0%;">Radius: 50 meters</div>`)[0];
+                popup_5bdd5689498fe5354a14b981063c1329.setContent(html_09736910df8135e2ad410a1d21c550e5);
+            
+        
+
+        circle_marker_05170d5ea1d7f9389f6be762a1937d50.bindPopup(popup_5bdd5689498fe5354a14b981063c1329)
+        ;
+
+        
+    
+    
+            var marker_3cc7946ab96119e2f542fbd06d2cb408 = L.marker(
+                [21.54882529172488, 105.84352363095356],
+                {"autoOpen": true}
+            ).addTo(map_494083e26c44007b5b78edb534c94727);
+        
+    
+        var popup_3875a9b12954fc2146da4db4f5511003 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_433fe1f65786d050375cb9d7334fd329 = $(`<div id="html_433fe1f65786d050375cb9d7334fd329" style="width: 100.0%; height: 100.0%;"><span style="font-size: 20px;">Phát hiện có 11 rác</span></div>`)[0];
+                popup_3875a9b12954fc2146da4db4f5511003.setContent(html_433fe1f65786d050375cb9d7334fd329);
+            
+        
+
+        marker_3cc7946ab96119e2f542fbd06d2cb408.bindPopup(popup_3875a9b12954fc2146da4db4f5511003)
+        ;
+
+        
+    
+</script>
+</html>
